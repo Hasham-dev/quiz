@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDI1dN1GudAqdN0L3pcFk5cs2HbGFqWIxo",
+            authDomain: "hellomyworlds-8258c.firebaseapp.com",
+            databaseURL: "https://hellomyworlds-8258c.firebaseio.com",
+            projectId: "hellomyworlds-8258c",
+            storageBucket: "hellomyworlds-8258c.appspot.com",
+            messagingSenderId: "1095930820434",
+            appId: "1:1095930820434:web:f637beb1ea798fca02ac8b",
+            measurementId: "G-JFDFCRNNDS"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    </script>
+</head>
+
+<body>
+    <h1>Assalam o Alaikum</h1>
+    <div>
+        <input type="text" id="name"> <br> <br>
+        <input type="text" id="roll"> <br> <br>
+        <button onclick="saveData()">Submit</button>
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>
