@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Quiz Application</title>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
@@ -17,30 +18,37 @@
     <script>
         // Your web app's Firebase configuration
         var firebaseConfig = {
-            apiKey: "AIzaSyDI1dN1GudAqdN0L3pcFk5cs2HbGFqWIxo",
-            authDomain: "hellomyworlds-8258c.firebaseapp.com",
-            databaseURL: "https://hellomyworlds-8258c.firebaseio.com",
-            projectId: "hellomyworlds-8258c",
-            storageBucket: "hellomyworlds-8258c.appspot.com",
-            messagingSenderId: "1095930820434",
-            appId: "1:1095930820434:web:f637beb1ea798fca02ac8b",
-            measurementId: "G-JFDFCRNNDS"
+            apiKey: "AIzaSyAEs8RZAQOe4AZFIi26cPyu3ajXq5JoI4g",
+            authDomain: "hv-quiz.firebaseapp.com",
+            databaseURL: "https://hv-quiz.firebaseio.com",
+            projectId: "hv-quiz",
+            storageBucket: "hv-quiz.appspot.com",
+            messagingSenderId: "257811514536",
+            appId: "1:257811514536:web:1db26394cb8f81dbabee9d",
+            measurementId: "G-JL6XKBLV3L"
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
     </script>
-    </script>
 </head>
 
 <body>
-    <h1>Assalam o Alaikum</h1>
-    <div>
-        <input type="text" id="name"> <br> <br>
-        <input type="text" id="roll"> <br> <br>
-        <button onclick="saveData()">Submit</button>
+    <div id="quizContainer" class="container">
+        <div class="title">Computer Quiz</div>
+        <div class="question" id="question"></div>
+        <label class="option"><input type="radio" name="option" value="1" /><span id="opt1"></span></label>
+        <label class="option"><input type="radio" name="option" value="2" /><span id="opt2"></span></label>
+        <label class="option"><input type="radio" name="option" value="3" /><span id="opt3"></span></label>
+        <label class="option"><input type="radio" name="option" value="4" /><span id="opt4"></span></label>
+        <button id="nextButton" class="next-btn" onclick="loadNextQuestion()">Next Question</button>
     </div>
+    <div id="result" class="container result" style="display: none;">
+    </div>
+    <button id="reset-btn" class="reset-btn" style="display: none;"><a href="index.html">Click me to play
+            again</a></button>
+    <script src="app.js"></script>
+    <script src="app-main.js"></script>
 </body>
-<script src="app.js"></script>
 
 </html>
